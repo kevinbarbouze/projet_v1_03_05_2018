@@ -86,20 +86,20 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t<img src=\"css/img/invitations.png\" alt=\"Invitations\" />
+\t\t<a href=\"#\">\t<img src=\"css/img/invitations.png\" alt=\"Invitations\" /></a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
 \t\t<a href=\"";
         // line 31
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("message");
-        echo "\">\t<img src=\"";
+        echo "\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/img/messages.png"), "html", null, true);
         echo "\" class=\"menu\" alt=\"Messages\" /></a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t<img src=\"css/img/parametres.png\" alt=\"Paramètres\" />
+\t\t\t<a href=\"#\"> <img src=\"css/img/parametres.png\" alt=\"Paramètres\" /></a>
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
@@ -155,7 +155,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
 \t\t";
         // line 86
-        echo twig_escape_filter($this->env, ($context["message"] ?? $this->getContext($context, "message")), "html", null, true);
+        echo twig_escape_filter($this->env, ($context["mess"] ?? $this->getContext($context, "mess")), "html", null, true);
         echo " ";
         echo twig_escape_filter($this->env, ($context["nom"] ?? $this->getContext($context, "nom")), "html", null, true);
         echo " ";
@@ -234,15 +234,15 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t<img src=\"css/img/invitations.png\" alt=\"Invitations\" />
+\t\t<a href=\"#\">\t<img src=\"css/img/invitations.png\" alt=\"Invitations\" /></a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t<a href=\"{{ path('message')}}\">\t<img src=\"{{ asset('css/img/messages.png')}}\" class=\"menu\" alt=\"Messages\" /></a>
+\t\t<a href=\"{{ path('message')}}\"><img src=\"{{ asset('css/img/messages.png')}}\" class=\"menu\" alt=\"Messages\" /></a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t<img src=\"css/img/parametres.png\" alt=\"Paramètres\" />
+\t\t\t<a href=\"#\"> <img src=\"css/img/parametres.png\" alt=\"Paramètres\" /></a>
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
@@ -293,7 +293,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 \t\t</div>
 
-\t\t{{message}} {{nom}} {{prenom}}
+\t\t{{mess}} {{nom}} {{prenom}}
 
 
 

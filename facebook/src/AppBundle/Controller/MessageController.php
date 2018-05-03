@@ -20,8 +20,8 @@ public function message(Request $request)
 {
 
     //Recuperation  des donnee de formulaire dans un tableau associatif "$params"
- if ($request->getMethod() == "POST") {
-            $params = $request->request->get('usermsg');
+    if($request->getMethod()=="POST"){
+            $par['message'] = $request->request->get('usermsg');
 }
                //Requete DQL sur "pseudo"
 
@@ -37,9 +37,9 @@ public function message(Request $request)
                //Retour du template rempli
                return $this->render('pageMessage.html.twig', array(
                       'nom' => $user->getNom(),
-                      'prenom'         => $user->getPrenom(),
-                      'bio'         => $user->getBio(),
-                      'message' =>$params,
+                      'prenom' => $user->getPrenom(),
+                      'bio' => $user->getBio(),
+                      'mess' =>$par['message'],
 
                   ));
 

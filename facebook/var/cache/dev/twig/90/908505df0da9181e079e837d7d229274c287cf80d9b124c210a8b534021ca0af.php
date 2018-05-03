@@ -61,14 +61,11 @@ class __TwigTemplate_3d2270665405f18967aa3e0ff922a8f24ba88b92a01fa3cc8d89775876f
 
 
 
-   ";
+";
         // line 22
         $this->displayBlock('javascripts', $context, $blocks);
         // line 23
-        echo "
-
-
-    </body>
+        echo "    </body>
 </html>
 ";
         
@@ -166,7 +163,7 @@ class __TwigTemplate_3d2270665405f18967aa3e0ff922a8f24ba88b92a01fa3cc8d89775876f
 
     public function getDebugInfo()
     {
-        return array (  140 => 22,  129 => 14,  120 => 13,  110 => 7,  101 => 6,  83 => 5,  68 => 23,  66 => 22,  58 => 16,  56 => 13,  50 => 10,  46 => 9,  41 => 8,  39 => 6,  35 => 5,  29 => 1,);
+        return array (  137 => 22,  126 => 14,  117 => 13,  107 => 7,  98 => 6,  80 => 5,  68 => 23,  66 => 22,  58 => 16,  56 => 13,  50 => 10,  46 => 9,  41 => 8,  39 => 6,  35 => 5,  29 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -200,10 +197,7 @@ class __TwigTemplate_3d2270665405f18967aa3e0ff922a8f24ba88b92a01fa3cc8d89775876f
 
 
 
-   {% block javascripts %} {% endblock %}
-
-
-
+{% block javascripts %} {% endblock %}
     </body>
 </html>
 ", "base.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\app\\Resources\\views\\base.html.twig");

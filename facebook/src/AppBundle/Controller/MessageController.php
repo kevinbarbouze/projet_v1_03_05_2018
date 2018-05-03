@@ -20,8 +20,9 @@ public function message(Request $request)
 {
 
     //Recuperation  des donnee de formulaire dans un tableau associatif "$params"
+    $params['message'] =null;
     if($request->getMethod()=="POST"){
-            $par['message'] = $request->request->get('usermsg');
+            $params['message'] = $request->request->get('usermsg');
 }
                //Requete DQL sur "pseudo"
 
@@ -39,7 +40,7 @@ public function message(Request $request)
                       'nom' => $user->getNom(),
                       'prenom' => $user->getPrenom(),
                       'bio' => $user->getBio(),
-                      'mess' =>$par['message'],
+                      'mess' =>$params['message'],
 
                   ));
 

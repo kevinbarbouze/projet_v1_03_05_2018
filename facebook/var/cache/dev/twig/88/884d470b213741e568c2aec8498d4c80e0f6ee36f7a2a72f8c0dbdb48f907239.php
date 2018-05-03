@@ -83,7 +83,10 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
-\t\t\t<a href=\"pageTimeLine.php\" class=\"menu\">Accueil</a>
+\t\t\t<a href=\"";
+        // line 23
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("homepage");
+        echo "\" class=\"menu\">Accueil</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
@@ -187,7 +190,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     }
 
-    // line 103
+    // line 102
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -196,12 +199,14 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 104
-        echo "
-
+        // line 103
+        echo "<script type=\"text/javascript\">
 \$('#o').click(function(e){
 \talert('ok')
 }
+
+</script>
+
 
 
 
@@ -226,7 +231,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     public function getDebugInfo()
     {
-        return array (  200 => 104,  191 => 103,  162 => 86,  152 => 79,  109 => 39,  96 => 31,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  203 => 103,  194 => 102,  165 => 86,  155 => 79,  112 => 39,  99 => 31,  88 => 23,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -261,7 +266,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
-\t\t\t<a href=\"pageTimeLine.php\" class=\"menu\">Accueil</a>
+\t\t\t<a href=\"{{path('homepage')}}\" class=\"menu\">Accueil</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
@@ -340,13 +345,14 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 </div>
 {% endblock %}
 
-
 {% block javascripts %}
-
-
+<script type=\"text/javascript\">
 \$('#o').click(function(e){
 \talert('ok')
 }
+
+</script>
+
 
 
 

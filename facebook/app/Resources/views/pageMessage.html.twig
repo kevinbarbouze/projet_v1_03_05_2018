@@ -36,7 +36,7 @@
 		</div>
 
 		<div class="large-2 medium-2 cell">
-			<a href="deconnexion.php" class="menu">Déconnexion</a>
+			<a href="{{ path('logout') }}" class="menu">Déconnexion</a>
 		</div>
 
 	</div>
@@ -82,7 +82,7 @@
 		</form>
 		</div>
 		</div>
-
+		<input class="btnenv" name="o" type="submit"  id="o" value="Envoyer"/>
 		{{mess}} {{nom}} {{prenom}}
 
 
@@ -97,4 +97,16 @@
 
 
 </div>
-{% endblock body %}
+{% endblock %}
+
+
+{% block javascripts %}
+
+
+$('#o').click(function(e){
+	alert('ok')
+}
+
+
+
+{% endblock %}

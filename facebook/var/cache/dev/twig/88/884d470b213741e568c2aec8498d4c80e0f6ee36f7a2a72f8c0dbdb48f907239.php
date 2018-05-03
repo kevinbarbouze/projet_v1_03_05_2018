@@ -12,6 +12,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
+            'javascripts' => array($this, 'block_javascripts'),
         );
     }
 
@@ -103,7 +104,10 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
-\t\t\t<a href=\"deconnexion.php\" class=\"menu\">Déconnexion</a>
+\t\t\t<a href=\"";
+        // line 39
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("logout");
+        echo "\" class=\"menu\">Déconnexion</a>
 \t\t</div>
 
 \t</div>
@@ -152,7 +156,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</form>
 \t\t</div>
 \t\t</div>
-
+\t\t<input class=\"btnenv\" name=\"o\" type=\"submit\"  id=\"o\" value=\"Envoyer\"/>
 \t\t";
         // line 86
         echo twig_escape_filter($this->env, ($context["mess"] ?? $this->getContext($context, "mess")), "html", null, true);
@@ -183,6 +187,33 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     }
 
+    // line 103
+    public function block_javascripts($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 104
+        echo "
+
+\$('#o').click(function(e){
+\talert('ok')
+}
+
+
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
     public function getTemplateName()
     {
         return "pageMessage.html.twig";
@@ -195,7 +226,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     public function getDebugInfo()
     {
-        return array (  158 => 86,  148 => 79,  95 => 31,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  200 => 104,  191 => 103,  162 => 86,  152 => 79,  109 => 39,  96 => 31,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -246,7 +277,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
-\t\t\t<a href=\"deconnexion.php\" class=\"menu\">Déconnexion</a>
+\t\t\t<a href=\"{{ path('logout') }}\" class=\"menu\">Déconnexion</a>
 \t\t</div>
 
 \t</div>
@@ -292,7 +323,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</form>
 \t\t</div>
 \t\t</div>
-
+\t\t<input class=\"btnenv\" name=\"o\" type=\"submit\"  id=\"o\" value=\"Envoyer\"/>
 \t\t{{mess}} {{nom}} {{prenom}}
 
 
@@ -307,7 +338,19 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
 
 </div>
-{% endblock body %}
+{% endblock %}
+
+
+{% block javascripts %}
+
+
+\$('#o').click(function(e){
+\talert('ok')
+}
+
+
+
+{% endblock %}
 ", "pageMessage.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\app\\Resources\\views\\pageMessage.html.twig");
     }
 }

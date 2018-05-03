@@ -55,10 +55,20 @@ class __TwigTemplate_3d2270665405f18967aa3e0ff922a8f24ba88b92a01fa3cc8d89775876f
         // line 13
         $this->displayBlock('body', $context, $blocks);
         // line 16
-        echo "        ";
+        echo "
+
+<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"   integrity=\"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=\"crossorigin=\"anonymous\"></script>
+
+
+<script type=\"text/javascript\">
+   ";
+        // line 22
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 18
-        echo "    </body>
+        // line 23
+        echo "</script>
+
+
+    </body>
 </html>
 ";
         
@@ -126,7 +136,7 @@ class __TwigTemplate_3d2270665405f18967aa3e0ff922a8f24ba88b92a01fa3cc8d89775876f
 
     }
 
-    // line 16
+    // line 22
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -135,8 +145,7 @@ class __TwigTemplate_3d2270665405f18967aa3e0ff922a8f24ba88b92a01fa3cc8d89775876f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 17
-        echo "        ";
+        echo " ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -157,7 +166,7 @@ class __TwigTemplate_3d2270665405f18967aa3e0ff922a8f24ba88b92a01fa3cc8d89775876f
 
     public function getDebugInfo()
     {
-        return array (  139 => 17,  130 => 16,  119 => 14,  110 => 13,  100 => 7,  91 => 6,  73 => 5,  61 => 18,  58 => 16,  56 => 13,  50 => 10,  46 => 9,  41 => 8,  39 => 6,  35 => 5,  29 => 1,);
+        return array (  140 => 22,  129 => 14,  120 => 13,  110 => 7,  101 => 6,  83 => 5,  68 => 23,  66 => 22,  58 => 16,  56 => 13,  50 => 10,  46 => 9,  41 => 8,  39 => 6,  35 => 5,  29 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -185,10 +194,18 @@ class __TwigTemplate_3d2270665405f18967aa3e0ff922a8f24ba88b92a01fa3cc8d89775876f
         {% block body %}
 
         {% endblock %}
-        {% block javascripts %}
-        {% endblock %}
+
+
+<script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"   integrity=\"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=\"crossorigin=\"anonymous\"></script>
+
+
+<script type=\"text/javascript\">
+   {% block javascripts %} {% endblock %}
+</script>
+
+
     </body>
 </html>
-", "base.html.twig", "C:\\xampp\\htdocs\\symfony\\facebook\\app\\Resources\\views\\base.html.twig");
+", "base.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\app\\Resources\\views\\base.html.twig");
     }
 }

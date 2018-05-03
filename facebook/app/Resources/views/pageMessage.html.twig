@@ -76,12 +76,14 @@
 		</div>
 
 		<div id="tchat" class="large-8 medium-8 cell ">
-		<form name="message" action="">
+		<form name="message" action="{{ path('message')}}" method="post">
         <input class="msg" name="usermsg" type="text" id="usermsg"  placeholder="Saisissez votre message..." />
         <input class="btnenv" name="envoyer" type="submit"  id="envoyer" value="Envoyer"/>
 		</form>
 		</div>
 		</div>
+
+		{{message}} {{nom}} {{prenom}}
 
 
 

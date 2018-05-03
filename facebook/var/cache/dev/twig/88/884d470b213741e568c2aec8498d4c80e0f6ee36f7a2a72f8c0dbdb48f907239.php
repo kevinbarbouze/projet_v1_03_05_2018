@@ -90,7 +90,12 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t<img src=\"css/img/messages.png\" alt=\"Messages\" />
+\t\t<a href=\"";
+        // line 31
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("message");
+        echo "\">\t<img src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/img/messages.png"), "html", null, true);
+        echo "\" class=\"menu\" alt=\"Messages\" /></a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
@@ -138,12 +143,24 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div id=\"tchat\" class=\"large-8 medium-8 cell \">
-\t\t<form name=\"message\" action=\"\">
+\t\t<form name=\"message\" action=\"";
+        // line 79
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("message");
+        echo "\" method=\"post\">
         <input class=\"msg\" name=\"usermsg\" type=\"text\" id=\"usermsg\"  placeholder=\"Saisissez votre message...\" />
         <input class=\"btnenv\" name=\"envoyer\" type=\"submit\"  id=\"envoyer\" value=\"Envoyer\"/>
 \t\t</form>
 \t\t</div>
 \t\t</div>
+
+\t\t";
+        // line 86
+        echo twig_escape_filter($this->env, ($context["message"] ?? $this->getContext($context, "message")), "html", null, true);
+        echo " ";
+        echo twig_escape_filter($this->env, ($context["nom"] ?? $this->getContext($context, "nom")), "html", null, true);
+        echo " ";
+        echo twig_escape_filter($this->env, ($context["prenom"] ?? $this->getContext($context, "prenom")), "html", null, true);
+        echo "
 
 
 
@@ -178,7 +195,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     public function getDebugInfo()
     {
-        return array (  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  158 => 86,  148 => 79,  95 => 31,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -221,7 +238,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t<img src=\"css/img/messages.png\" alt=\"Messages\" />
+\t\t<a href=\"{{ path('message')}}\">\t<img src=\"{{ asset('css/img/messages.png')}}\" class=\"menu\" alt=\"Messages\" /></a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
@@ -269,12 +286,14 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div id=\"tchat\" class=\"large-8 medium-8 cell \">
-\t\t<form name=\"message\" action=\"\">
+\t\t<form name=\"message\" action=\"{{ path('message')}}\" method=\"post\">
         <input class=\"msg\" name=\"usermsg\" type=\"text\" id=\"usermsg\"  placeholder=\"Saisissez votre message...\" />
         <input class=\"btnenv\" name=\"envoyer\" type=\"submit\"  id=\"envoyer\" value=\"Envoyer\"/>
 \t\t</form>
 \t\t</div>
 \t\t</div>
+
+\t\t{{message}} {{nom}} {{prenom}}
 
 
 

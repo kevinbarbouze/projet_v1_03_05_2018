@@ -19,7 +19,31 @@ class MessageController extends DefaultController
 public function message(Request $request)
 {
 
- return $this->render('pageMessage.html.twig');
+    //Recuperation  des donnee de formulaire dans un tableau associatif "$params"
+ if ($request->getMethod() == "POST") {
+            $params = $request->request->get('usermsg');
+}
+               //Requete DQL sur "pseudo"
+
+               $repo = $this->getDoctrine()->getManager()->getRepository('AppBundle:Utilisateur');
+                 $monId = $this->getUser()->getId();
+               $user = $repo->findOneBy(['id' => $monId]);
+
+               if($user == null){
+                 $this->redirectToRoute('profile_not_found');
+               }
+
+               //Creation du tableau de parametres de profil pour le template twig
+               //Retour du template rempli
+               return $this->render('pageMessage.html.twig', array(
+                      'nom' => $user->getNom(),
+                      'prenom'         => $user->getPrenom(),
+                      'bio'         => $user->getBio(),
+                      'message' =>$params,
+
+                  ));
+
+
 }
 
 }

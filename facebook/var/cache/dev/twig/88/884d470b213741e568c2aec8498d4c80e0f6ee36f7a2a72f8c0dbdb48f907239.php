@@ -201,15 +201,11 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
         // line 103
         echo "<script type=\"text/javascript\">
+
 \$('#o').click(function(e){
 \talert('ok')
-}
-
+});
 </script>
-
-
-
-
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -347,15 +343,11 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
 {% block javascripts %}
 <script type=\"text/javascript\">
+
 \$('#o').click(function(e){
 \talert('ok')
-}
-
+});
 </script>
-
-
-
-
 {% endblock %}
 ", "pageMessage.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\app\\Resources\\views\\pageMessage.html.twig");
     }

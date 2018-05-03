@@ -635,3 +635,14 @@ fb68f7,127.0.0.1,POST,http://localhost:8000/message,1525359491,,200
 f99e17,127.0.0.1,GET,http://localhost:8000/message,1525359910,d1480f,200
 d1480f,127.0.0.1,POST,http://localhost:8000/message,1525359910,,500
 35e088,127.0.0.1,POST,http://localhost:8000/message,1525359936,,200
+4d4e4a,127.0.0.1,GET,http://localhost:8000/message,1525360069,193b9f,200
+193b9f,127.0.0.1,POST,http://localhost:8000/message,1525360069,,500
+6fd89f,127.0.0.1,GET,http://localhost:8000/logout,1525360087,,302
+df6a78,127.0.0.1,GET,http://localhost:8000/login,1525360088,,200
+cafc0f,127.0.0.1,POST,http://localhost:8000/login,1525360091,,302
+cb637e,127.0.0.1,GET,http://localhost:8000/login,1525360092,,302
+271f1d,127.0.0.1,GET,http://localhost:8000/monprofil,1525360093,,302
+63ff18,127.0.0.1,GET,http://localhost:8000/profile/3,1525360094,,200
+fd6e97,127.0.0.1,GET,http://localhost:8000/profile/css/img/photoProfil.png,1525360096,adcc2a,200
+adcc2a,127.0.0.1,GET,http://localhost:8000/profile/css/img/photoProfil.png,1525360096,,404
+73733f,127.0.0.1,GET,http://localhost:8000/message,1525360097,,200

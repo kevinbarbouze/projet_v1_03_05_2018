@@ -19,9 +19,8 @@ Variable d'environnement
 
 - Tester si la commande php est reconnus dans le cmd, si oui vous pouvez executer le script
 test nouvelle ligne;
-ok
-ok1
 
-ok2
-ok3
-ok4
+
+*************************************************************
+Il faut regarde pour mieu arranger le twig en faisant des extension
+le menus profil on peut le faire extends d'une page ou dans un block parce que la c'est long 

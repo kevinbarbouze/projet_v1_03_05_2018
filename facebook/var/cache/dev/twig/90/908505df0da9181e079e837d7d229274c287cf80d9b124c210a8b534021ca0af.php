@@ -60,12 +60,12 @@ class __TwigTemplate_3d2270665405f18967aa3e0ff922a8f24ba88b92a01fa3cc8d89775876f
 <script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"   integrity=\"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=\"crossorigin=\"anonymous\"></script>
 
 
-<script type=\"text/javascript\">
+
    ";
         // line 22
         $this->displayBlock('javascripts', $context, $blocks);
         // line 23
-        echo "</script>
+        echo "
 
 
     </body>
@@ -199,9 +199,9 @@ class __TwigTemplate_3d2270665405f18967aa3e0ff922a8f24ba88b92a01fa3cc8d89775876f
 <script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"   integrity=\"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=\"crossorigin=\"anonymous\"></script>
 
 
-<script type=\"text/javascript\">
+
    {% block javascripts %} {% endblock %}
-</script>
+
 
 
     </body>

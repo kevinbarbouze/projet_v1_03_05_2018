@@ -310,28 +310,22 @@ div#Apropos {
 
 
 
-/************************************CODE DE FLO ************************************/
+/************************************page messagerie************************************/
 
 div.tchat {
-    text-align:left;
-	display: block;
-    background:#fff;
-    height:400px;
-    width:800px;
-    border:1px solid #ACD8F0;
+    background-color: #B39DDB;
+    min-height:400px;
+    width: 90%;
+    border: 1px solid #512DA8;
 	border-radius: 10px;
-
-	}
-
-input.msg {
-	height:50px;
-    width:900px;
 }
 
-input.btnenv {
-	font-family: contenu;
-	background-color: #008CBA;
-	padding: 10px 24px;
+span.tchat {
+    border-radius: 1.3em;
+    padding: 6px 12px;
+    line-height: 2;
+    background-color: #512DA8;
+    color: white;
 }
 
-/*********************************** FIN CODE DE FLO *****************************************/
+/*********************************** FIN page messagerie *****************************************/

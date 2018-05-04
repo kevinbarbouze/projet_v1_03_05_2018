@@ -78,7 +78,7 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
   <div class=\"large-5 medium-12 cell\">
 
     <h1>informations supplementaires </h1>
-
+  
   </div>
 
 
@@ -184,7 +184,7 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
   <div class=\"large-5 medium-12 cell\">
 
     <h1>informations supplementaires </h1>
-
+  
   </div>
 
 

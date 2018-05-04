@@ -159,15 +159,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</form>
 \t\t</div>
 \t\t</div>
-\t\t<input class=\"btnenv\" name=\"o\" type=\"submit\"  id=\"o\" value=\"Envoyer\"/>
-\t\t";
-        // line 86
-        echo twig_escape_filter($this->env, ($context["mess"] ?? $this->getContext($context, "mess")), "html", null, true);
-        echo " ";
-        echo twig_escape_filter($this->env, ($context["nom"] ?? $this->getContext($context, "nom")), "html", null, true);
-        echo " ";
-        echo twig_escape_filter($this->env, ($context["prenom"] ?? $this->getContext($context, "prenom")), "html", null, true);
-        echo "
+\t
 
 
 
@@ -190,7 +182,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     }
 
-    // line 102
+    // line 101
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -199,7 +191,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 103
+        // line 102
         echo "
 <script type=\"text/javascript\">
 
@@ -230,7 +222,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     public function getDebugInfo()
     {
-        return array (  203 => 103,  194 => 102,  165 => 86,  155 => 79,  112 => 39,  99 => 31,  88 => 23,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  195 => 102,  186 => 101,  155 => 79,  112 => 39,  99 => 31,  88 => 23,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -327,8 +319,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</form>
 \t\t</div>
 \t\t</div>
-\t\t<input class=\"btnenv\" name=\"o\" type=\"submit\"  id=\"o\" value=\"Envoyer\"/>
-\t\t{{mess}} {{nom}} {{prenom}}
+\t
 
 
 

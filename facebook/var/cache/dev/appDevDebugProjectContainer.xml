@@ -2187,13 +2187,6 @@
         <argument>null</argument>
       </call>
       <call method="add">
-        <argument type="service" id="security.request_matcher.8usi1ac"/>
-        <argument type="collection">
-          <argument>IS_AUTHENTICATED_ANONYMOUSLY</argument>
-        </argument>
-        <argument>null</argument>
-      </call>
-      <call method="add">
         <argument type="service" id="security.request_matcher.2jd_drb"/>
         <argument type="collection">
           <argument>ROLE_USER</argument>
@@ -2685,9 +2678,6 @@
     </service>
     <service id="security.request_matcher.it2k2lk" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/register</argument>
-    </service>
-    <service id="security.request_matcher.8usi1ac" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-      <argument>^/message</argument>
     </service>
     <service id="security.request_matcher.2jd_drb" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/</argument>

@@ -19,7 +19,11 @@
 			<input type="text" class="menu" placeholder="Chercher..." />
 		</div>
 
+
 		<div class="large-2 medium-2 cell lienAccueil">
+
+		<div class="large-2 medium-2 cell">
+
 			<a href="{{path('homepage')}}" class="menu">Accueil</a>
 		</div>
 
@@ -76,9 +80,24 @@
 	</div>
 
 
+
 		
 		{# <input class="btnenv" name="o" type="submit"  id="o" value="Envoyer"/> #}
 		
+
+		<div id="tchat" class="large-3 medium-3 cell">
+		</div>
+
+		<div id="tchat" class="large-8 medium-8 cell ">
+		<form name="message" action="{{ path('message')}}" method="post">
+        <input class="msg" name="usermsg" type="text" id="usermsg"  placeholder="Saisissez votre message..." />
+        <input class="btnenv" name="envoyer" type="submit"  id="envoyer" value="Envoyer"/>
+		</form>
+		</div>
+		</div>
+		<input class="btnenv" name="o" type="submit"  id="o" value="Envoyer"/>
+		{{mess}} {{nom}} {{prenom}}
+
 
 
 

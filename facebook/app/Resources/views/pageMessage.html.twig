@@ -20,23 +20,23 @@
 		</div>
 
 		<div class="large-2 medium-2 cell">
-			<a href="pageTimeLine.php" class="menu">Accueil</a>
+			<a href="{{path('homepage')}}" class="menu">Accueil</a>
 		</div>
 
 		<div class="large-1 medium-1 cell">
-			<img src="css/img/invitations.png" alt="Invitations" />
+		<a href="#">	<img src="css/img/invitations.png" class="menu" alt="Invitations" /></a>
 		</div>
 
 		<div class="large-1 medium-1 cell">
-		<a href="{{ path('message')}}">	<img src="{{ asset('css/img/messages.png')}}" class="menu" alt="Messages" /></a>
+		<a href="{{ path('message')}}"><img src="{{ asset('css/img/messages.png')}}" class="menu" alt="Messages" /></a>
 		</div>
 
 		<div class="large-1 medium-1 cell">
-			<img src="css/img/parametres.png" alt="Paramètres" />
+			<a href="#"> <img src="css/img/parametres.png" class="menu" alt="Paramètres" /></a>
 		</div>
 
 		<div class="large-2 medium-2 cell">
-			<a href="deconnexion.php" class="menu">Déconnexion</a>
+			<a href="{{ path('logout') }}" class="menu">Déconnexion</a>
 		</div>
 
 	</div>
@@ -76,12 +76,14 @@
 		</div>
 
 		<div id="tchat" class="large-8 medium-8 cell ">
-		<form name="message" action="">
+		<form name="message" action="{{ path('message')}}" method="post">
         <input class="msg" name="usermsg" type="text" id="usermsg"  placeholder="Saisissez votre message..." />
         <input class="btnenv" name="envoyer" type="submit"  id="envoyer" value="Envoyer"/>
 		</form>
 		</div>
 		</div>
+		<input class="btnenv" name="o" type="submit"  id="o" value="Envoyer"/>
+		{{mess}} {{nom}} {{prenom}}
 
 
 
@@ -95,4 +97,4 @@
 
 
 </div>
-{% endblock body %}
+{% endblock %}

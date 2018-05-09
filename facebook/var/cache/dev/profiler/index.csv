@@ -256,3 +256,6 @@ f2d400,127.0.0.1,GET,http://127.0.0.1:8000/login,1525875416,,302
 458726,127.0.0.1,GET,http://127.0.0.1:8000/profile/2,1525875417,,200
 7fd49f,127.0.0.1,GET,http://127.0.0.1:8000/profile/css/img/photoProfil.png,1525875419,2a2c2b,200
 2a2c2b,127.0.0.1,GET,http://127.0.0.1:8000/profile/css/img/photoProfil.png,1525875419,,404
+4ab5dd,127.0.0.1,GET,http://127.0.0.1:8000/profile/css/img/photoProfil.png,1525876494,0157a9,200
+0157a9,127.0.0.1,GET,http://127.0.0.1:8000/profile/css/img/photoProfil.png,1525876498,,404
+07934d,127.0.0.1,GET,http://127.0.0.1:8000/message,1525876509,,200

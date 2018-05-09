@@ -20,11 +20,7 @@ public function message(Request $request)
 {
 
     //Recuperation  des donnee de formulaire dans un tableau associatif "$params"
-<<<<<<< HEAD
     $params['message'] =null;
-=======
-    $par['message']=null;
->>>>>>> beda9c54d36159ade029c53da61ad295fd3f68c1
     if($request->getMethod()=="POST"){
             $params['message'] = $request->request->get('usermsg');
 }

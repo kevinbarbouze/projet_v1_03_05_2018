@@ -85,7 +85,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t<div class=\"large-2 medium-2 cell\">
 \t\t\t<a href=\"";
         // line 23
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("homepage");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("login");
         echo "\" class=\"menu\">Accueil</a>
 \t\t</div>
 
@@ -159,7 +159,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</form>
 \t\t</div>
 \t\t</div>
-\t
+
 
 
 
@@ -257,7 +257,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
-\t\t\t<a href=\"{{path('homepage')}}\" class=\"menu\">Accueil</a>
+\t\t\t<a href=\"{{path('login')}}\" class=\"menu\">Accueil</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
@@ -319,7 +319,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</form>
 \t\t</div>
 \t\t</div>
-\t
+
 
 
 

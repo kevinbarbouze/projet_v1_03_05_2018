@@ -109,13 +109,30 @@
 
 	$('#envoyer').click(function(e){
 		e.preventDefault();
+
 		var pseudo ="{{prenom | raw}} {{nom | raw}} |"; // on sécurise les données
 		var message = $('#usermsg').val();
 
+		$.post("{{path('message')}}",
+	     {
+	         pseudo: pseudo,
+	        message: message
+	     },
+	     function(data, status){
+	         alert("Data: " + data + "\nStatus: " + status);
+	     });
+
 	$('span.tchat').append("<div>"+pseudo+"<span>"+message+"</span>"+"</div>");
 
-
 	});
+
+	function charger(time){
+		setInterval(function(){
+			alert("Hello"); 
+		}, time);
+	}
+
+charger(1000);
 </script>
 
 {% endblock %}

@@ -210,18 +210,36 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
 \t\$('#envoyer').click(function(e){
 \t\te.preventDefault();
+
 \t\tvar pseudo =\"";
-        // line 112
+        // line 113
         echo ($context["prenom"] ?? $this->getContext($context, "prenom"));
         echo " ";
         echo ($context["nom"] ?? $this->getContext($context, "nom"));
         echo " |\"; // on sécurise les données
 \t\tvar message = \$('#usermsg').val();
 
+\t\t\$.post(\"";
+        // line 116
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("message");
+        echo "\",
+\t     {
+\t         pseudo: pseudo,
+\t        message: message
+\t     },
+\t     function(data, status){
+\t         alert(\"Data: \" + data + \"\\nStatus: \" + status);
+\t     });
+
 \t\$('span.tchat').append(\"<div>\"+pseudo+\"<span>\"+message+\"</span>\"+\"</div>\");
 
-
 \t});
+
+\tfunction charger(time){
+\t\tsetInterval(function(){ alert(\"Hello\"); }, time);
+\t}
+
+\tcharger(1000);
 </script>
 
 ";
@@ -245,7 +263,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     public function getDebugInfo()
     {
-        return array (  215 => 112,  208 => 107,  199 => 106,  175 => 90,  162 => 79,  125 => 45,  117 => 40,  108 => 34,  104 => 33,  96 => 28,  88 => 23,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  224 => 116,  216 => 113,  208 => 107,  199 => 106,  175 => 90,  162 => 79,  125 => 45,  117 => 40,  108 => 34,  104 => 33,  96 => 28,  88 => 23,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -369,13 +387,28 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
 \t\$('#envoyer').click(function(e){
 \t\te.preventDefault();
+
 \t\tvar pseudo =\"{{prenom | raw}} {{nom | raw}} |\"; // on sécurise les données
 \t\tvar message = \$('#usermsg').val();
 
+\t\t\$.post(\"{{path('message')}}\",
+\t     {
+\t         pseudo: pseudo,
+\t        message: message
+\t     },
+\t     function(data, status){
+\t         alert(\"Data: \" + data + \"\\nStatus: \" + status);
+\t     });
+
 \t\$('span.tchat').append(\"<div>\"+pseudo+\"<span>\"+message+\"</span>\"+\"</div>\");
 
-
 \t});
+
+\tfunction charger(time){
+\t\tsetInterval(function(){ alert(\"Hello\"); }, time);
+\t}
+
+\tcharger(1000);
 </script>
 
 {% endblock %}

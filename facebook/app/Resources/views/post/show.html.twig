@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Post</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Texte</th>
+                <td>{{ post.texte }}</td>
+            </tr>
+            <tr>
+                <th>Datepost</th>
+                <td>{% if post.datePost %}{{ post.datePost|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Heurepost</th>
+                <td>{% if post.heurePost %}{{ post.heurePost|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Visibilite</th>
+                <td>{% if post.visibilite %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ post.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('post_admin_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('post_admin_edit', { 'id': post.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

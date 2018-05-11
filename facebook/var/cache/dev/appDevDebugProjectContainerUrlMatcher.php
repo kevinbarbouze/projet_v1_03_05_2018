@@ -137,6 +137,77 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\ProfileController::monProfil',  '_route' => 'mon_profil',);
         }
 
+        if (0 === strpos($pathinfo, '/post/admin')) {
+            // post_admin_index
+            if ('/post/admin' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'AppBundle\\Controller\\PostController::indexAction',  '_route' => 'post_admin_index',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_post_admin_index;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'post_admin_index'));
+                }
+
+                if (!in_array($canonicalMethod, array('GET'))) {
+                    $allow = array_merge($allow, array('GET'));
+                    goto not_post_admin_index;
+                }
+
+                return $ret;
+            }
+            not_post_admin_index:
+
+            // post_admin_new
+            if ('/post/admin/new' === $pathinfo) {
+                $ret = array (  '_controller' => 'AppBundle\\Controller\\PostController::newAction',  '_route' => 'post_admin_new',);
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_post_admin_new;
+                }
+
+                return $ret;
+            }
+            not_post_admin_new:
+
+            // post_admin_show
+            if (preg_match('#^/post/admin/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'post_admin_show')), array (  '_controller' => 'AppBundle\\Controller\\PostController::showAction',));
+                if (!in_array($canonicalMethod, array('GET'))) {
+                    $allow = array_merge($allow, array('GET'));
+                    goto not_post_admin_show;
+                }
+
+                return $ret;
+            }
+            not_post_admin_show:
+
+            // post_admin_edit
+            if (preg_match('#^/post/admin/(?P<id>[^/]++)/edit$#sD', $pathinfo, $matches)) {
+                $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'post_admin_edit')), array (  '_controller' => 'AppBundle\\Controller\\PostController::editAction',));
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_post_admin_edit;
+                }
+
+                return $ret;
+            }
+            not_post_admin_edit:
+
+            // post_admin_delete
+            if (preg_match('#^/post/admin/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'post_admin_delete')), array (  '_controller' => 'AppBundle\\Controller\\PostController::deleteAction',));
+                if (!in_array($requestMethod, array('DELETE'))) {
+                    $allow = array_merge($allow, array('DELETE'));
+                    goto not_post_admin_delete;
+                }
+
+                return $ret;
+            }
+            not_post_admin_delete:
+
+        }
+
         // profile
         if (0 === strpos($pathinfo, '/profile') && preg_match('#^/profile/(?P<id_user>[^/]++)$#sD', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'profile')), array (  '_controller' => 'AppBundle\\Controller\\ProfileController::profile',));
@@ -156,6 +227,41 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $ret;
         }
         not_homepage:
+
+        if (0 === strpos($pathinfo, '/utilisateur/admin')) {
+            // utilisateur_admin_index
+            if ('/utilisateur/admin' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'AppBundle\\Controller\\UtilisateurController::indexAction',  '_route' => 'utilisateur_admin_index',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_utilisateur_admin_index;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'utilisateur_admin_index'));
+                }
+
+                if (!in_array($canonicalMethod, array('GET'))) {
+                    $allow = array_merge($allow, array('GET'));
+                    goto not_utilisateur_admin_index;
+                }
+
+                return $ret;
+            }
+            not_utilisateur_admin_index:
+
+            // utilisateur_admin_show
+            if (preg_match('#^/utilisateur/admin/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                $ret = $this->mergeDefaults(array_replace($matches, array('_route' => 'utilisateur_admin_show')), array (  '_controller' => 'AppBundle\\Controller\\UtilisateurController::showAction',));
+                if (!in_array($canonicalMethod, array('GET'))) {
+                    $allow = array_merge($allow, array('GET'));
+                    goto not_utilisateur_admin_show;
+                }
+
+                return $ret;
+            }
+            not_utilisateur_admin_show:
+
+        }
 
         if ('/' === $pathinfo && !$allow) {
             throw new Symfony\Component\Routing\Exception\NoConfigurationException();

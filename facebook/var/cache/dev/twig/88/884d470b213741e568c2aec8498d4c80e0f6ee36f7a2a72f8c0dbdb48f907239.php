@@ -82,38 +82,52 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t\t<input type=\"text\" class=\"menu\" placeholder=\"Chercher...\" />
 \t\t</div>
 
-\t\t<div class=\"large-2 medium-2 cell\">
+\t\t<div class=\"large-2 medium-2 cell lienAccueil\">
 \t\t\t<a href=\"";
         // line 23
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("login");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("homepage");
         echo "\" class=\"menu\">Accueil</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t<a href=\"#\">\t<img src=\"css/img/invitations.png\" alt=\"Invitations\" /></a>
+\t\t\t\t<a href=\"#\">
+\t\t\t<img src=\"";
+        // line 28
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/img/invitations.png"), "html", null, true);
+        echo "\" class=\"menu\" alt=\"Invitations\" />
+\t\t</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t<a href=\"";
-        // line 31
+\t\t\t<a href=\"";
+        // line 33
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("message");
-        echo "\"><img src=\"";
+        echo "\">
+\t\t\t<img src=\"";
+        // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/img/messages.png"), "html", null, true);
-        echo "\" class=\"menu\" alt=\"Messages\" /></a>
+        echo "\" class=\"menu\" alt=\"Messages\"  />
+\t\t</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t<a href=\"#\"> <img src=\"css/img/parametres.png\" alt=\"Paramètres\" /></a>
+\t\t\t<a href=\"#\">
+\t\t\t<img src=\"";
+        // line 40
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/img/parametres.png"), "html", null, true);
+        echo "\" class=\"menu\" alt=\"Paramètres\" />
+\t\t\t</a>
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
 \t\t\t<a href=\"";
-        // line 39
+        // line 45
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("logout");
         echo "\" class=\"menu\">Déconnexion</a>
 \t\t</div>
 
 \t</div>
+
 
 \t<div class=\"grid-x grid-padding-x contenu\">
 
@@ -151,7 +165,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
 \t\t<div id=\"tchat\" class=\"large-8 medium-8 cell \">
 \t\t<form name=\"message\" action=\"";
-        // line 79
+        // line 86
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("message");
         echo "\" method=\"post\">
         <input class=\"msg\" name=\"usermsg\" type=\"text\" id=\"usermsg\"  placeholder=\"Saisissez votre message...\" />
@@ -182,7 +196,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     }
 
-    // line 101
+    // line 108
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -191,7 +205,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 102
+        // line 109
         echo "
 <script type=\"text/javascript\">
 
@@ -222,7 +236,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     public function getDebugInfo()
     {
-        return array (  195 => 102,  186 => 101,  155 => 79,  112 => 39,  99 => 31,  88 => 23,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  209 => 109,  200 => 108,  169 => 86,  125 => 45,  117 => 40,  108 => 34,  104 => 33,  96 => 28,  88 => 23,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -256,27 +270,34 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t\t<input type=\"text\" class=\"menu\" placeholder=\"Chercher...\" />
 \t\t</div>
 
+\t\t<div class=\"large-2 medium-2 cell lienAccueil\">
+\t\t\t<a href=\"{{path('homepage')}}\" class=\"menu\">Accueil</a>
+\t\t</div>
+
+\t\t<div class=\"large-1 medium-1 cell\">
+\t\t\t\t<a href=\"#\">
+\t\t\t<img src=\"{{ asset('css/img/invitations.png')}}\" class=\"menu\" alt=\"Invitations\" />
+\t\t</a>
+\t\t</div>
+
+\t\t<div class=\"large-1 medium-1 cell\">
+\t\t\t<a href=\"{{path('message')}}\">
+\t\t\t<img src=\"{{ asset('css/img/messages.png')}}\" class=\"menu\" alt=\"Messages\"  />
+\t\t</a>
+\t\t</div>
+
+\t\t<div class=\"large-1 medium-1 cell\">
+\t\t\t<a href=\"#\">
+\t\t\t<img src=\"{{ asset('css/img/parametres.png')}}\" class=\"menu\" alt=\"Paramètres\" />
+\t\t\t</a>
+\t\t</div>
+
 \t\t<div class=\"large-2 medium-2 cell\">
-\t\t\t<a href=\"{{path('login')}}\" class=\"menu\">Accueil</a>
-\t\t</div>
-
-\t\t<div class=\"large-1 medium-1 cell\">
-\t\t<a href=\"#\">\t<img src=\"css/img/invitations.png\" alt=\"Invitations\" /></a>
-\t\t</div>
-
-\t\t<div class=\"large-1 medium-1 cell\">
-\t\t<a href=\"{{ path('message')}}\"><img src=\"{{ asset('css/img/messages.png')}}\" class=\"menu\" alt=\"Messages\" /></a>
-\t\t</div>
-
-\t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t<a href=\"#\"> <img src=\"css/img/parametres.png\" alt=\"Paramètres\" /></a>
-\t\t</div>
-
-\t\t<div class=\"large-2 medium-2 cell\">
-\t\t\t<a href=\"{{ path('logout') }}\" class=\"menu\">Déconnexion</a>
+\t\t\t<a href=\"{{path('logout')}}\" class=\"menu\">Déconnexion</a>
 \t\t</div>
 
 \t</div>
+
 
 \t<div class=\"grid-x grid-padding-x contenu\">
 
@@ -346,6 +367,6 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 </script>
 
 {% endblock %}
-", "pageMessage.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\app\\Resources\\views\\pageMessage.html.twig");
+", "pageMessage.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\app\\Resources\\views\\pageMessage.html.twig");
     }
 }

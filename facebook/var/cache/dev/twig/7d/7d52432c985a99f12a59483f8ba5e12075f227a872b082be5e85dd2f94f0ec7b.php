@@ -254,6 +254,6 @@ class __TwigTemplate_506acaa4f22890506f126396c83f403666a98525f79915f18f0666f1001
     }
 </style>
 {% endblock %}
-", "default/index.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\app\\Resources\\views\\default\\index.html.twig");
+", "default/index.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\app\\Resources\\views\\default\\index.html.twig");
     }
 }

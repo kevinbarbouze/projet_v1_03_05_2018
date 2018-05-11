@@ -138,7 +138,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         // profile
-        if (0 === strpos($pathinfo, '/profile') && preg_match('#^/profile/(?P<id_user>[^/]++)$#sD', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/profile') && preg_match('#^/profile/(?P<pseudo>[^/]++)$#sD', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'profile')), array (  '_controller' => 'AppBundle\\Controller\\ProfileController::profile',));
         }
 

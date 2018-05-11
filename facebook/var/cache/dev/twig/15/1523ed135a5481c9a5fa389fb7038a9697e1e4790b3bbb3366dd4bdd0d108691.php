@@ -67,6 +67,7 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
         echo "\" />
   <input type=\"submit\" name=\"connexion\" class=\"btn\" value=\"Connexion\"/>
 </form>
+
 </div>
 
 
@@ -78,7 +79,7 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
   <div class=\"large-5 medium-12 cell\">
 
     <h1>informations supplementaires </h1>
-  
+
   </div>
 
 
@@ -87,7 +88,7 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
   <h1>Inscription</h1>
 
   <form action=\"";
-        // line 38
+        // line 39
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("register");
         echo "\" method=\"post\" class=\"inscription\">
   <!--<input type=\"text\" name=\"username\" id=\"username\" placeholder=\"pseudo (3 à 15 caractères)\" required />-->
@@ -101,12 +102,15 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
 <br/>
 <br/>
 <input type=\"hidden\" name=\"_target_path\" value=\"";
-        // line 49
+        // line 50
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("register");
         echo "\" />
 <input type=\"submit\" name=\"inscription\" class=\"btn contenu\" value=\"Créer un compte\">
 </form>
-
+<h2 class=\"text-left subheader\">";
+        // line 53
+        echo twig_escape_filter($this->env, ($context["erreur"] ?? $this->getContext($context, "erreur")), "html", null, true);
+        echo "</h2>
 </div>
 
 
@@ -142,7 +146,7 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
 
     public function getDebugInfo()
     {
-        return array (  105 => 49,  91 => 38,  66 => 16,  59 => 12,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  112 => 53,  106 => 50,  92 => 39,  66 => 16,  59 => 12,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -173,6 +177,7 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
   <input type=\"hidden\" name=\"_target_path\" value=\"{{  absolute_url(path(\"login\")) }}\" />
   <input type=\"submit\" name=\"connexion\" class=\"btn\" value=\"Connexion\"/>
 </form>
+
 </div>
 
 
@@ -184,7 +189,7 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
   <div class=\"large-5 medium-12 cell\">
 
     <h1>informations supplementaires </h1>
-  
+
   </div>
 
 
@@ -206,7 +211,7 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
 <input type=\"hidden\" name=\"_target_path\" value=\"{{ path(\"register\") }}\" />
 <input type=\"submit\" name=\"inscription\" class=\"btn contenu\" value=\"Créer un compte\">
 </form>
-
+<h2 class=\"text-left subheader\">{{erreur}}</h2>
 </div>
 
 
@@ -222,6 +227,6 @@ class __TwigTemplate_6e9a46c6f7554853a4a4d31e80ef29cc1000da44a20ff61fec05c78a63b
 
 </div>
 {% endblock %}
-", "login.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\app\\Resources\\views\\login.html.twig");
+", "login.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\app\\Resources\\views\\login.html.twig");
     }
 }

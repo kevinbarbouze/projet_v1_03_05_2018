@@ -10,6 +10,7 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        'd11dcc0191a380951885e568af488540' => __DIR__ . '/..' . '/sonata-project/block-bundle/src/Resources/stubs/symfony2.php',
         '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -21,6 +22,7 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
+            'Twig\\Extensions\\' => 16,
             'Twig\\' => 5,
             'Tests\\' => 6,
         ),
@@ -31,6 +33,7 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
             'Symfony\\Polyfill\\Php56\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Apcu\\' => 22,
+            'Symfony\\Component\\Security\\Acl\\' => 31,
             'Symfony\\Component\\' => 18,
             'Symfony\\Bundle\\SwiftmailerBundle\\' => 33,
             'Symfony\\Bundle\\MonologBundle\\' => 29,
@@ -40,6 +43,12 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
             'Symfony\\Bridge\\PhpUnit\\' => 23,
             'Symfony\\Bridge\\Monolog\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
+            'Sonata\\DatagridBundle\\' => 22,
+            'Sonata\\CoreBundle\\' => 18,
+            'Sonata\\Cache\\Tests\\' => 19,
+            'Sonata\\Cache\\' => 13,
+            'Sonata\\BlockBundle\\' => 19,
+            'Sonata\\AdminBundle\\' => 19,
             'Sensio\\Bundle\\GeneratorBundle\\' => 30,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
             'Sensio\\Bundle\\DistributionBundle\\' => 33,
@@ -56,6 +65,11 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
         array (
             'Monolog\\' => 8,
         ),
+        'K' => 
+        array (
+            'Knp\\Menu\\' => 9,
+            'Knp\\Bundle\\MenuBundle\\' => 22,
+        ),
         'I' => 
         array (
             'Incenteev\\ParameterHandler\\' => 27,
@@ -63,6 +77,10 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
         'F' => 
         array (
             'Fig\\Link\\' => 9,
+        ),
+        'E' => 
+        array (
+            'Exporter\\' => 9,
         ),
         'D' => 
         array (
@@ -76,6 +94,7 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
         'C' => 
         array (
             'Composer\\CaBundle\\' => 18,
+            'Cocur\\Slugify\\' => 14,
         ),
         'A' => 
         array (
@@ -84,6 +103,10 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\Extensions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/extensions/src',
+        ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
@@ -111,6 +134,10 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
         'Symfony\\Polyfill\\Apcu\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-apcu',
+        ),
+        'Symfony\\Component\\Security\\Acl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/security-acl',
         ),
         'Symfony\\Component\\' => 
         array (
@@ -148,6 +175,30 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
         array (
             0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Doctrine',
         ),
+        'Sonata\\DatagridBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/datagrid-bundle/src',
+        ),
+        'Sonata\\CoreBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/core-bundle/src',
+        ),
+        'Sonata\\Cache\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/cache/test',
+        ),
+        'Sonata\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/cache/lib',
+        ),
+        'Sonata\\BlockBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/block-bundle/src',
+        ),
+        'Sonata\\AdminBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/admin-bundle/src',
+        ),
         'Sensio\\Bundle\\GeneratorBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/sensio/generator-bundle',
@@ -184,6 +235,14 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Knp\\Menu\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-menu/src/Knp/Menu',
+        ),
+        'Knp\\Bundle\\MenuBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-menu-bundle/src',
+        ),
         'Incenteev\\ParameterHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
@@ -191,6 +250,10 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
         'Fig\\Link\\' => 
         array (
             0 => __DIR__ . '/..' . '/fig/link-util/src',
+        ),
+        'Exporter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/exporter/src',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
@@ -220,6 +283,10 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
         array (
             0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
         ),
+        'Cocur\\Slugify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cocur/slugify/src',
+        ),
         'AppBundle\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/AppBundle',
@@ -229,6 +296,10 @@ class ComposerStaticInit6e81b3f5c478013f1c7cfd3c6fa833bf
     public static $prefixesPsr0 = array (
         'T' => 
         array (
+            'Twig_Extensions_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/extensions/lib',
+            ),
             'Twig_' => 
             array (
                 0 => __DIR__ . '/..' . '/twig/twig/lib',

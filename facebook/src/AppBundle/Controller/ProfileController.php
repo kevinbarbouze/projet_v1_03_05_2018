@@ -9,15 +9,15 @@ use AppBundle\Entity\Utilisateur;
 class ProfileController extends DefaultController
 {
    /**
-   * @Route("/profile/{id_user}", name="profile")
+   * @Route("/profile/{pseudo}", name="profile")
    */
-   public function profile(Request $request, $id_user)
+   public function profile(Request $request, $pseudo)
    {
      //Requete DQL sur "pseudo"
      $repo = $this->getDoctrine()->getManager()->getRepository('AppBundle:Utilisateur');
      //$query = $em->createQuery("SELECT u FROM Utilisateur WHERE  = u.id = :id ");
      //$profile = $query->getResult();
-     $user = $repo->findOneBy(['id' => $id_user]);
+     $user = $repo->findOneBy(['id' => $pseudo]);
 
      if($user == null){
        $this->redirectToRoute('profile_not_found');
@@ -39,7 +39,7 @@ class ProfileController extends DefaultController
    public function monProfil()
    {
       $monId = $this->getUser()->getId();
-        return $this->redirectToRoute('profile', array('id_user' => $monId));
+        return $this->redirectToRoute('profile', array('pseudo' => $monId));
 
    }
 }

@@ -63,28 +63,31 @@
 			<h1>Conversations</h1>
 			<h1>*Liste conversations*</h1>
 		</div>
-			
+
 		<div id="msg" class="large-8 medium-8 cell msg">
 			<h1>*destinataire*</h1>
-				
+
 				<div class="tchat">
 					<span class="tchat">
-						{{prenom}} {{nom}} | {{mess}}
+
+						<!--	<div id="pseudo"> prenom nom  | 	<span id="message"> message </span>	</div> -->
+
+
 					</span>
 				</div>
-				
+
 				<form name="message" action="{{ path('message')}}" method="post">
         			<input name="usermsg" type="text" id="usermsg"  placeholder="Saisissez votre message..." />
         			<input class="btn" name="envoyer" type="submit"  id="envoyer" value="Envoyer"/>
 				</form>
 		</div>
-			
+
 	</div>
 
 
-		
+
 		{# <input class="btnenv" name="o" type="submit"  id="o" value="Envoyer"/> #}
-		
+
 
 
 
@@ -103,9 +106,16 @@
 {% block javascripts %}
 
 <script type="text/javascript">
-$('#o').click(function(e){
-	alert('ok')
-});
+
+	$('#envoyer').click(function(e){
+		e.preventDefault();
+		var pseudo ="{{prenom | raw}} {{nom | raw}} |"; // on sécurise les données
+		var message = $('#usermsg').val();
+
+	$('span.tchat').append("<div>"+pseudo+"<span>"+message+"</span>"+"</div>");
+
+
+	});
 </script>
 
 {% endblock %}

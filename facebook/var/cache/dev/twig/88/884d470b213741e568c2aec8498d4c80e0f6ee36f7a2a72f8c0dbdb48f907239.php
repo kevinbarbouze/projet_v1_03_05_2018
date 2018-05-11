@@ -90,7 +90,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t\t<a href=\"#\">
+\t\t<a href=\"#\">
 \t\t\t<img src=\"";
         // line 28
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/img/invitations.png"), "html", null, true);
@@ -99,7 +99,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t<a href=\"";
+\t\t<a href=\"";
         // line 33
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("message");
         echo "\">
@@ -128,52 +128,51 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
 \t</div>
 
-
 \t<div class=\"grid-x grid-padding-x contenu\">
 
 \t\t<div class=\"large-12 medium-12 cell\">
-\t\t\t<h1> Messagerie privée </h1>
+\t\t\t<h1>Messagerie privée</h1>
 \t\t</div>
+
 \t</div>
 
 \t<hr/>
 
-\t\t\t<div class=\"grid-x grid-padding-x contenu\">
+\t<div class=\"grid-x grid-padding-x contenu\">
 
-\t\t\t<div id=\"msg\" class=\"large-3 medium-3 cell msg\">
-\t\t\t<h1> Messages </h1>
-\t\t\t</div>
-\t\t\t<div id=\"msg\" class=\"large-8 medium-8 cell msg\">
-\t\t\t<h1> Conversation </h1>
-\t\t\t</div>
-\t\t\t</div>
-
-\t\t<div class=\"grid-x grid-padding-x contenu\">
-
-\t\t<div id=\"tchat\" class=\"large-3 medium-3 cell\">
-\t\t<h1> *Liste conversations récentes* </h1>
+\t\t<div id=\"msg\" class=\"large-4 medium-4 cell msg\">
+\t\t\t<h1>Conversations</h1>
+\t\t\t<h1>*Liste conversations*</h1>
 \t\t</div>
 
-\t\t<div id=\"tchat\" class=\"large-8 medium-8 cell tchat\">
-\t\t</div>
-\t\t</div>
+\t\t<div id=\"msg\" class=\"large-8 medium-8 cell msg\">
+\t\t\t<h1>*destinataire*</h1>
 
-\t\t<div class=\"grid-x grid-padding-x contenu\">
+\t\t\t\t<div class=\"tchat\">
+\t\t\t\t\t<span class=\"tchat\">
 
-\t\t<div id=\"tchat\" class=\"large-3 medium-3 cell\">
-\t\t</div>
+\t\t\t\t\t\t<!--\t<div id=\"pseudo\"> prenom nom  | \t<span id=\"message\"> message </span>\t</div> -->
 
-\t\t<div id=\"tchat\" class=\"large-8 medium-8 cell \">
-\t\t<form name=\"message\" action=\"";
-        // line 86
+
+\t\t\t\t\t</span>
+\t\t\t\t</div>
+
+\t\t\t\t<form name=\"message\" action=\"";
+        // line 79
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("message");
         echo "\" method=\"post\">
-        <input class=\"msg\" name=\"usermsg\" type=\"text\" id=\"usermsg\"  placeholder=\"Saisissez votre message...\" />
-        <input class=\"btnenv\" name=\"envoyer\" type=\"submit\"  id=\"envoyer\" value=\"Envoyer\"/>
-\t\t</form>
-\t\t</div>
+        \t\t\t<input name=\"usermsg\" type=\"text\" id=\"usermsg\"  placeholder=\"Saisissez votre message...\" />
+        \t\t\t<input class=\"btn\" name=\"envoyer\" type=\"submit\"  id=\"envoyer\" value=\"Envoyer\"/>
+\t\t\t\t</form>
 \t\t</div>
 
+\t</div>
+
+
+
+\t\t";
+        // line 90
+        echo "
 
 
 
@@ -196,7 +195,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     }
 
-    // line 108
+    // line 106
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -205,14 +204,24 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 109
+        // line 107
         echo "
 <script type=\"text/javascript\">
 
-\$('#o').click(function(e){
-\talert('ok')
-});
+\t\$('#envoyer').click(function(e){
+\t\te.preventDefault();
+\t\tvar pseudo =\"";
+        // line 112
+        echo ($context["prenom"] ?? $this->getContext($context, "prenom"));
+        echo " ";
+        echo ($context["nom"] ?? $this->getContext($context, "nom"));
+        echo " |\"; // on sécurise les données
+\t\tvar message = \$('#usermsg').val();
 
+\t\$('span.tchat').append(\"<div>\"+pseudo+\"<span>\"+message+\"</span>\"+\"</div>\");
+
+
+\t});
 </script>
 
 ";
@@ -236,7 +245,7 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
     public function getDebugInfo()
     {
-        return array (  209 => 109,  200 => 108,  169 => 86,  125 => 45,  117 => 40,  108 => 34,  104 => 33,  96 => 28,  88 => 23,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  215 => 112,  208 => 107,  199 => 106,  175 => 90,  162 => 79,  125 => 45,  117 => 40,  108 => 34,  104 => 33,  96 => 28,  88 => 23,  69 => 6,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -275,13 +284,13 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t\t<a href=\"#\">
+\t\t<a href=\"#\">
 \t\t\t<img src=\"{{ asset('css/img/invitations.png')}}\" class=\"menu\" alt=\"Invitations\" />
 \t\t</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t\t<a href=\"{{path('message')}}\">
+\t\t<a href=\"{{path('message')}}\">
 \t\t\t<img src=\"{{ asset('css/img/messages.png')}}\" class=\"menu\" alt=\"Messages\"  />
 \t\t</a>
 \t\t</div>
@@ -293,53 +302,51 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
-\t\t\t<a href=\"{{path('logout')}}\" class=\"menu\">Déconnexion</a>
+\t\t\t<a href=\"{{ path('logout') }}\" class=\"menu\">Déconnexion</a>
 \t\t</div>
 
 \t</div>
-
 
 \t<div class=\"grid-x grid-padding-x contenu\">
 
 \t\t<div class=\"large-12 medium-12 cell\">
-\t\t\t<h1> Messagerie privée </h1>
+\t\t\t<h1>Messagerie privée</h1>
 \t\t</div>
+
 \t</div>
 
 \t<hr/>
 
-\t\t\t<div class=\"grid-x grid-padding-x contenu\">
+\t<div class=\"grid-x grid-padding-x contenu\">
 
-\t\t\t<div id=\"msg\" class=\"large-3 medium-3 cell msg\">
-\t\t\t<h1> Messages </h1>
-\t\t\t</div>
-\t\t\t<div id=\"msg\" class=\"large-8 medium-8 cell msg\">
-\t\t\t<h1> Conversation </h1>
-\t\t\t</div>
-\t\t\t</div>
-
-\t\t<div class=\"grid-x grid-padding-x contenu\">
-
-\t\t<div id=\"tchat\" class=\"large-3 medium-3 cell\">
-\t\t<h1> *Liste conversations récentes* </h1>
+\t\t<div id=\"msg\" class=\"large-4 medium-4 cell msg\">
+\t\t\t<h1>Conversations</h1>
+\t\t\t<h1>*Liste conversations*</h1>
 \t\t</div>
 
-\t\t<div id=\"tchat\" class=\"large-8 medium-8 cell tchat\">
-\t\t</div>
+\t\t<div id=\"msg\" class=\"large-8 medium-8 cell msg\">
+\t\t\t<h1>*destinataire*</h1>
+
+\t\t\t\t<div class=\"tchat\">
+\t\t\t\t\t<span class=\"tchat\">
+
+\t\t\t\t\t\t<!--\t<div id=\"pseudo\"> prenom nom  | \t<span id=\"message\"> message </span>\t</div> -->
+
+
+\t\t\t\t\t</span>
+\t\t\t\t</div>
+
+\t\t\t\t<form name=\"message\" action=\"{{ path('message')}}\" method=\"post\">
+        \t\t\t<input name=\"usermsg\" type=\"text\" id=\"usermsg\"  placeholder=\"Saisissez votre message...\" />
+        \t\t\t<input class=\"btn\" name=\"envoyer\" type=\"submit\"  id=\"envoyer\" value=\"Envoyer\"/>
+\t\t\t\t</form>
 \t\t</div>
 
-\t\t<div class=\"grid-x grid-padding-x contenu\">
+\t</div>
 
-\t\t<div id=\"tchat\" class=\"large-3 medium-3 cell\">
-\t\t</div>
 
-\t\t<div id=\"tchat\" class=\"large-8 medium-8 cell \">
-\t\t<form name=\"message\" action=\"{{ path('message')}}\" method=\"post\">
-        <input class=\"msg\" name=\"usermsg\" type=\"text\" id=\"usermsg\"  placeholder=\"Saisissez votre message...\" />
-        <input class=\"btnenv\" name=\"envoyer\" type=\"submit\"  id=\"envoyer\" value=\"Envoyer\"/>
-\t\t</form>
-\t\t</div>
-\t\t</div>
+
+\t\t{# <input class=\"btnenv\" name=\"o\" type=\"submit\"  id=\"o\" value=\"Envoyer\"/> #}
 
 
 
@@ -360,10 +367,15 @@ class __TwigTemplate_0acd81e494143bc6cae64f8161986c1e4e387f64f5928e6cd775c3ed1c6
 
 <script type=\"text/javascript\">
 
-\$('#o').click(function(e){
-\talert('ok')
-});
+\t\$('#envoyer').click(function(e){
+\t\te.preventDefault();
+\t\tvar pseudo =\"{{prenom | raw}} {{nom | raw}} |\"; // on sécurise les données
+\t\tvar message = \$('#usermsg').val();
 
+\t\$('span.tchat').append(\"<div>\"+pseudo+\"<span>\"+message+\"</span>\"+\"</div>\");
+
+
+\t});
 </script>
 
 {% endblock %}

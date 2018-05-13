@@ -320,7 +320,11 @@ div.tchat {
 	border-radius: 10px;
 }
 
+<<<<<<< HEAD
 span.tchat > *{
+=======
+span.tchat {
+>>>>>>> master
     border-radius: 1.3em;
     padding: 6px 12px;
     line-height: 2;

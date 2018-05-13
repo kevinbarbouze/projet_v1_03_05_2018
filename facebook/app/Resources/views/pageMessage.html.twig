@@ -20,6 +20,7 @@
 		</div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<div class="large-2 medium-2 cell">
 			<a href="{{path('login')}}" class="menu">Accueil</a>
 		</div>
@@ -52,6 +53,26 @@
 			<img src="{{ asset('css/img/parametres.png')}}" class="menu" alt="Paramètres" />
 			</a>
 >>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
+=======
+
+		<div class="large-2 medium-2 cell lienAccueil">
+
+		<div class="large-2 medium-2 cell">
+
+			<a href="{{path('homepage')}}" class="menu">Accueil</a>
+		</div>
+
+		<div class="large-1 medium-1 cell">
+		<a href="#">	<img src="css/img/invitations.png" class="menu" alt="Invitations" /></a>
+		</div>
+
+		<div class="large-1 medium-1 cell">
+		<a href="{{ path('message')}}"><img src="{{ asset('css/img/messages.png')}}" class="menu" alt="Messages" /></a>
+		</div>
+
+		<div class="large-1 medium-1 cell">
+			<a href="#"> <img src="css/img/parametres.png" class="menu" alt="Paramètres" /></a>
+>>>>>>> master
 		</div>
 
 		<div class="large-2 medium-2 cell">
@@ -63,12 +84,14 @@
 	<div class="grid-x grid-padding-x contenu">
 
 		<div class="large-12 medium-12 cell">
-			<h1> Messagerie privée </h1>
+			<h1>Messagerie privée</h1>
 		</div>
+
 	</div>
 
 	<hr/>
 
+<<<<<<< HEAD
 			<div class="grid-x grid-padding-x contenu">
 
 			<div id="msg" class="large-3 medium-3 cell msg">
@@ -98,8 +121,30 @@
 
 <<<<<<< HEAD
 		<div id="tchat" class="large-8 medium-8 cell tchat">
+=======
+	<div class="grid-x grid-padding-x contenu">
+
+		<div id="msg" class="large-4 medium-4 cell msg">
+			<h1>Conversations</h1>
+			<h1>*Liste conversations*</h1>
+>>>>>>> master
 		</div>
+			
+		<div id="msg" class="large-8 medium-8 cell msg">
+			<h1>*destinataire*</h1>
+				
+				<div class="tchat">
+					<span class="tchat">
+						{{prenom}} {{nom}} | {{mess}}
+					</span>
+				</div>
+				
+				<form name="message" action="{{ path('message')}}" method="post">
+        			<input name="usermsg" type="text" id="usermsg"  placeholder="Saisissez votre message..." />
+        			<input class="btn" name="envoyer" type="submit"  id="envoyer" value="Envoyer"/>
+				</form>
 		</div>
+<<<<<<< HEAD
 =======
 	</div>
 
@@ -107,8 +152,16 @@
 
 		{# <input class="btnenv" name="o" type="submit"  id="o" value="Envoyer"/> #}
 >>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
+=======
+			
+	</div>
 
-		<div class="grid-x grid-padding-x contenu">
+>>>>>>> master
+
+
+		
+		{# <input class="btnenv" name="o" type="submit"  id="o" value="Envoyer"/> #}
+		
 
 <<<<<<< HEAD
 		<div id="tchat" class="large-3 medium-3 cell">
@@ -121,6 +174,9 @@
 		</form>
 		</div>
 		</div>
+		<input class="btnenv" name="o" type="submit"  id="o" value="Envoyer"/>
+		{{mess}} {{nom}} {{prenom}}
+
 
 
 =======
@@ -138,6 +194,7 @@
 
 </div>
 {% endblock %}
+<<<<<<< HEAD
 
 {% block javascripts %}
 
@@ -179,3 +236,5 @@ charger();
 </script>
 
 {% endblock %}
+=======
+>>>>>>> master

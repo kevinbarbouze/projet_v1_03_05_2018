@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use AppBundle\Entity\Utilisateur;
 use AppBundle\Entity\Role;
+use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 
 
 class LoginController extends DefaultController
@@ -34,7 +35,7 @@ class LoginController extends DefaultController
 
           }
       }else {
-        $redir = $this->render('login.html.twig');
+        $redir = $this->render('login.html.twig',array('erreur' => ""));
       }
 
         return $redir;
@@ -64,12 +65,11 @@ class LoginController extends DefaultController
            $params['email']  = $request->request->get('email');
            $params['password']  = $request->request->get('password');
            $pass2 = $request->request->get('password2');
-
-           if(! preg_match('#^[\w.-]+@[\w.-]+\.[a-z]{2,6}$#i', $params['email'])) {
-               echo "Entrer mail valide";
-           }else if ($params['password'] != $pass2) {
-               echo "Entrer pass valide";
+           $erreur;
+           if ($params['password'] != $pass2) {
+               $erreur = "Les mots de passe ne correspondent pas.";
            }else{
+             $erreur ="";
               //// TODO: Requete méthode
               $em = $this->getDoctrine()->getManager();
 
@@ -82,15 +82,18 @@ class LoginController extends DefaultController
               $role = $em->getRepository('AppBundle:Role')->find(1); //User
               $user->setIdRole($role); //Role User
 
-              $em->persist($user);
-
-              $em->flush();
-
-
-
+              try {
+                  $em->persist($user);
+                  $em->flush();
+                }catch (UniqueConstraintViolationException $e) {
+                  $erreur = "Cette adresse email est deja utilisée.";
+                }
            }
-            return $this->redirectToRoute('login');
+            return $this->render('login.html.twig',array('erreur' => $erreur));
+       }else{
+          return  $this->redirectToRoute('login');
        }
+
    }
 
 

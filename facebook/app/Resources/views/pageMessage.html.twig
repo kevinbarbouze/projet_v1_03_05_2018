@@ -19,20 +19,39 @@
 			<input type="text" class="menu" placeholder="Chercher..." />
 		</div>
 
+<<<<<<< HEAD
 		<div class="large-2 medium-2 cell">
 			<a href="{{path('login')}}" class="menu">Accueil</a>
 		</div>
 
 		<div class="large-1 medium-1 cell">
 		<a href="#">	<img src="css/img/invitations.png" alt="Invitations" /></a>
+=======
+		<div class="large-2 medium-2 cell lienAccueil">
+			<a href="{{path('homepage')}}" class="menu">Accueil</a>
 		</div>
 
 		<div class="large-1 medium-1 cell">
-		<a href="{{ path('message')}}"><img src="{{ asset('css/img/messages.png')}}" class="menu" alt="Messages" /></a>
+		<a href="#">
+			<img src="{{ asset('css/img/invitations.png')}}" class="menu" alt="Invitations" />
+		</a>
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
 		</div>
 
 		<div class="large-1 medium-1 cell">
+		<a href="{{path('message')}}">
+			<img src="{{ asset('css/img/messages.png')}}" class="menu" alt="Messages"  />
+		</a>
+		</div>
+
+		<div class="large-1 medium-1 cell">
+<<<<<<< HEAD
 			<a href="#"> <img src="css/img/parametres.png" alt="Paramètres" /></a>
+=======
+			<a href="#">
+			<img src="{{ asset('css/img/parametres.png')}}" class="menu" alt="Paramètres" />
+			</a>
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
 		</div>
 
 		<div class="large-2 medium-2 cell">
@@ -60,18 +79,38 @@
 			</div>
 			</div>
 
+<<<<<<< HEAD
 		<div class="grid-x grid-padding-x contenu">
+=======
+				<div class="tchat">
+					<span class="tchat">
+
+						<!--	<div id="pseudo"> prenom nom  | 	<span id="message"> message </span>	</div> -->
+
+
+					</span>
+				</div>
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
 
 		<div id="tchat" class="large-3 medium-3 cell">
 		<h1> *Liste conversations récentes* </h1>
 		</div>
 
+<<<<<<< HEAD
 		<div id="tchat" class="large-8 medium-8 cell tchat">
 		</div>
 		</div>
+=======
+	</div>
+
+
+
+		{# <input class="btnenv" name="o" type="submit"  id="o" value="Envoyer"/> #}
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
 
 		<div class="grid-x grid-padding-x contenu">
 
+<<<<<<< HEAD
 		<div id="tchat" class="large-3 medium-3 cell">
 		</div>
 
@@ -84,6 +123,8 @@
 		</div>
 
 
+=======
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
 
 
 
@@ -102,10 +143,39 @@
 
 <script type="text/javascript">
 
+<<<<<<< HEAD
 $('#o').click(function(e){
 	alert('ok')
 });
 
+=======
+	$('#envoyer').click(function(e){
+		e.preventDefault();
+
+		var pseudo ="{{prenom | raw}} {{nom | raw}} |"; // on sécurise les données
+		var message = $('#usermsg').val();
+
+		$.post("{{path('message')}}",
+	     {
+	         pseudo: pseudo,
+	        message: message
+	     },
+	     function(data, status){
+	         alert("Data: " + data + "\nStatus: " + status);
+	     });
+
+	$('span.tchat').append("<div>"+pseudo+"<span>"+message+"</span>"+"</div>");
+
+	});
+
+	function charger(){
+		setInterval(function(){
+			alert("Hello");
+		}, 3000);
+	}
+
+charger();
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
 </script>
 
 {% endblock %}

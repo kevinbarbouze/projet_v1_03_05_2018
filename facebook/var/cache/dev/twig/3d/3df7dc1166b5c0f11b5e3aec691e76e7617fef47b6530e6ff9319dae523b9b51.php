@@ -61,6 +61,10 @@ class __TwigTemplate_e534d6a8176c50c7f007b96d1c7e10ae4115693289f9eadd976eef9ac85
     C0.1,6,0,5.6,0,5.2c0-0.4,0.2-0.7,0.4-0.9C0.6,4,1,3.9,1.3,3.9c0.4,0,0.8,0.1,1.1,0.4l2.5,2.5l4.7-4.7c0.3-0.3,0.7-0.4,1-0.4
     c0.4,0,0.7,0.2,0.9,0.4C11.8,2.4,12,2.7,12,3.1z\"/>
 </svg>
+<<<<<<< HEAD
 ", "@WebProfiler/Icon/yes.svg", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\yes.svg");
+=======
+", "@WebProfiler/Icon/yes.svg", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\yes.svg");
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
     }
 }

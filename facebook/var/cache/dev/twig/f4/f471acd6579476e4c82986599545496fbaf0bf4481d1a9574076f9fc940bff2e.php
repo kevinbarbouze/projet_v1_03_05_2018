@@ -217,6 +217,10 @@ class __TwigTemplate_936fa437a2034c3411440345cb015ef00330929aa8215ea0c786dec3a95
         </div>
     </form>
 </div>
+<<<<<<< HEAD
 ", "@WebProfiler/Profiler/search.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\search.html.twig");
+=======
+", "@WebProfiler/Profiler/search.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\search.html.twig");
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
     }
 }

@@ -70,31 +70,38 @@ class __TwigTemplate_ecb3b61018d3aa027f461906fc887db4aca2353b89bc69465a543655a5c
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
+\t\t\t\t<a href=\"#\">
 \t\t\t<img src=\"";
-        // line 24
+        // line 25
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/img/invitations.png"), "html", null, true);
         echo "\" class=\"menu\" alt=\"Invitations\" />
+\t\t</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t<a href=\"";
-        // line 28
+\t\t\t<a href=\"";
+        // line 30
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("message");
-        echo "\">\t<img src=\"";
+        echo "\">
+\t\t\t<img src=\"";
+        // line 31
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/img/messages.png"), "html", null, true);
-        echo "\" class=\"menu\" alt=\"Messages\" /></a>
+        echo "\" class=\"menu\" alt=\"Messages\"  />
+\t\t</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
+\t\t\t<a href=\"#\">
 \t\t\t<img src=\"";
-        // line 32
+        // line 37
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/img/parametres.png"), "html", null, true);
         echo "\" class=\"menu\" alt=\"Paramètres\" />
+\t\t\t</a>
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
 \t\t\t<a href=\"";
-        // line 36
+        // line 42
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("logout");
         echo "\" class=\"menu\">Déconnexion</a>
 \t\t</div>
@@ -105,7 +112,7 @@ class __TwigTemplate_ecb3b61018d3aa027f461906fc887db4aca2353b89bc69465a543655a5c
 
 \t\t<div class=\"large-12 medium-12 cell\">
 \t\t\t<img src=\"";
-        // line 44
+        // line 50
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("css/img/photoProfil.png"), "html", null, true);
         echo "\" class=\"profil\" alt=\"Photo de profil\" />
 \t\t</div>
@@ -120,7 +127,7 @@ class __TwigTemplate_ecb3b61018d3aa027f461906fc887db4aca2353b89bc69465a543655a5c
 
 \t\t<div class=\"large-4 medium-4 cell nomProfil\">
 \t\t\t<h1>";
-        // line 56
+        // line 62
         echo twig_escape_filter($this->env, ($context["prenom"] ?? $this->getContext($context, "prenom")), "html", null, true);
         echo " ";
         echo twig_escape_filter($this->env, ($context["nom"] ?? $this->getContext($context, "nom")), "html", null, true);
@@ -210,7 +217,7 @@ class __TwigTemplate_ecb3b61018d3aa027f461906fc887db4aca2353b89bc69465a543655a5c
 \t\t\t  <p>chômage</p>
 \t\t\t <h2>Scolarité</h2>
 \t\t\t <p>";
-        // line 141
+        // line 147
         echo twig_escape_filter($this->env, ($context["bio"] ?? $this->getContext($context, "bio")), "html", null, true);
         echo "</p>
 \t\t</div>
@@ -242,7 +249,7 @@ class __TwigTemplate_ecb3b61018d3aa027f461906fc887db4aca2353b89bc69465a543655a5c
 
     }
 
-    // line 164
+    // line 170
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -251,7 +258,7 @@ class __TwigTemplate_ecb3b61018d3aa027f461906fc887db4aca2353b89bc69465a543655a5c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 165
+        // line 171
         echo "\t<script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/fonctionsPages.js"), "html", null, true);
         echo "\"></script>
@@ -276,7 +283,7 @@ class __TwigTemplate_ecb3b61018d3aa027f461906fc887db4aca2353b89bc69465a543655a5c
 
     public function getDebugInfo()
     {
-        return array (  255 => 165,  246 => 164,  214 => 141,  124 => 56,  109 => 44,  98 => 36,  91 => 32,  82 => 28,  75 => 24,  68 => 20,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  262 => 171,  253 => 170,  221 => 147,  131 => 62,  116 => 50,  105 => 42,  97 => 37,  88 => 31,  84 => 30,  76 => 25,  68 => 20,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -312,15 +319,21 @@ class __TwigTemplate_ecb3b61018d3aa027f461906fc887db4aca2353b89bc69465a543655a5c
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
+\t\t\t\t<a href=\"#\">
 \t\t\t<img src=\"{{ asset('css/img/invitations.png')}}\" class=\"menu\" alt=\"Invitations\" />
+\t\t</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
-\t\t<a href=\"{{ path('message')}}\">\t<img src=\"{{ asset('css/img/messages.png')}}\" class=\"menu\" alt=\"Messages\" /></a>
+\t\t\t<a href=\"{{path('message')}}\">
+\t\t\t<img src=\"{{ asset('css/img/messages.png')}}\" class=\"menu\" alt=\"Messages\"  />
+\t\t</a>
 \t\t</div>
 
 \t\t<div class=\"large-1 medium-1 cell\">
+\t\t\t<a href=\"#\">
 \t\t\t<img src=\"{{ asset('css/img/parametres.png')}}\" class=\"menu\" alt=\"Paramètres\" />
+\t\t\t</a>
 \t\t</div>
 
 \t\t<div class=\"large-2 medium-2 cell\">
@@ -455,6 +468,6 @@ class __TwigTemplate_ecb3b61018d3aa027f461906fc887db4aca2353b89bc69465a543655a5c
 {% block javascripts %}
 \t<script src=\"{{asset('js/fonctionsPages.js')}}\"></script>
 {% endblock %}
-", "profile.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\app\\Resources\\views\\profile.html.twig");
+", "profile.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\app\\Resources\\views\\profile.html.twig");
     }
 }

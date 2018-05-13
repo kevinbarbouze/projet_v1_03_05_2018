@@ -22,7 +22,7 @@ public function message(Request $request)
     //Recuperation  des donnee de formulaire dans un tableau associatif "$params"
     $params['message'] =null;
     if($request->getMethod()=="POST"){
-            $params['message'] = $request->request->get('usermsg');
+        
 }
                //Requete DQL sur "pseudo"
 

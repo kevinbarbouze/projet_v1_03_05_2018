@@ -1166,6 +1166,6 @@ class __TwigTemplate_ca51056bbe57580c15c39e0cd9bf02b319ebc743bf5b8cb0280a78e39cd
     });
 
 /*]]>*/</script>
-", "@WebProfiler/Profiler/base_js.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\base_js.html.twig");
+", "@WebProfiler/Profiler/base_js.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\base_js.html.twig");
     }
 }

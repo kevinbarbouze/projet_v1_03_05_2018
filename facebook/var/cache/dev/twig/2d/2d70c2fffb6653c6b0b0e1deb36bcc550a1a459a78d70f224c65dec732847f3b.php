@@ -73,6 +73,10 @@ class __TwigTemplate_84010d9f14f9298408800ecce2ad0b4749f2bfa40c6300d9b4ffa466799
     c-0.5-0.1-1.1,0.3-1.1,0.9S13.9,3,14.4,3c3.3,0.5,5.8,3.4,5.8,6.8c0,0.5,0.5,1.2,1,1.2c0,0,0,0,0,0c0.6,0,1-0.7,1-1.2
     C22.2,5.5,19,1.6,14.7,1z\"/>
 </svg>
+<<<<<<< HEAD
 ", "@WebProfiler/Icon/event.svg", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\event.svg");
+=======
+", "@WebProfiler/Icon/event.svg", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\event.svg");
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
     }
 }

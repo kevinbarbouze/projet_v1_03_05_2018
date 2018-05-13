@@ -2,12 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Toaster{% endblock %}</title>
+        <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 		    <link rel="stylesheet" type="text/css" href="{{ asset('css/foundation.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         {% block body %}
@@ -15,9 +16,7 @@
         {% endblock %}
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
-
-
-{% block javascripts %} {% endblock %}
+        {% block javascripts %}
+        {% endblock %}
     </body>
 </html>

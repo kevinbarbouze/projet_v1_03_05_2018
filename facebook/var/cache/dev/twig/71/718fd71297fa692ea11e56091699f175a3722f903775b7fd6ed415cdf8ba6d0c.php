@@ -65,6 +65,6 @@ class __TwigTemplate_8018c7a824d05f21f50c24e4c2227d0c458fbfb38baddddcb47c8ef9eba
     C9.3,4,9,4.3,9,4.6V11.4z M9,16.4C9,16.7,9.3,17,9.6,17h1.8c0.3,0,0.6-0.3,0.6-0.6v-1.8c0-0.3-0.3-0.6-0.6-0.6H9.6
     C9.3,14,9,14.3,9,14.6V16.4z\"/>
 </svg>
-", "@WebProfiler/Icon/logger.svg", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\logger.svg");
+", "@WebProfiler/Icon/logger.svg", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\logger.svg");
     }
 }

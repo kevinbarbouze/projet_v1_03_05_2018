@@ -185,6 +185,6 @@ class __TwigTemplate_cfaaf27e32c4ac2e9a684c9d7d11f981d2bc0aefb71399e48d56e8a8e3d
         })|raw }}
     </div>
 {% endif %}
-", "@Twig/Exception/trace.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\trace.html.twig");
+", "@Twig/Exception/trace.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\trace.html.twig");
     }
 }

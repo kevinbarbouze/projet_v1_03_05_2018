@@ -81,6 +81,10 @@ class __TwigTemplate_a7506ce4120072819eb97d76be27c0985d8906a7a1f288e4b7b03018842
     c-0.6,0-1.2,0.5-1.2,1.2c0,0.6,0.5,1.2,1.1,1.2c0,0,0,0,0,0c-1.3,0-2.3-1.2-2.3-2.6c0-1.5,1-2.5,2.3-2.5c1.3,0,2.3,1.1,2.3,2.5
     C17.1,9.8,16.2,10.9,15,11z\"/>
 </svg>
+<<<<<<< HEAD
 ", "@WebProfiler/Icon/exception.svg", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\exception.svg");
+=======
+", "@WebProfiler/Icon/exception.svg", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Icon\\exception.svg");
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
     }
 }

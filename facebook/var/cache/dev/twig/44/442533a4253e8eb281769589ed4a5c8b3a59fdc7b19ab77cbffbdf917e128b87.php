@@ -87,6 +87,10 @@ class __TwigTemplate_c1f6308332f8fb4b64c9b24696563e63337ec1f3a851f448de4a66361de
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 ", "@WebProfiler/Profiler/header.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\header.html.twig");
+=======
+", "@WebProfiler/Profiler/header.html.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\header.html.twig");
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
     }
 }

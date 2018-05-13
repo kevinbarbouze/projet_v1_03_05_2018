@@ -2218,6 +2218,10 @@ table.logs .metadata {
         margin-left: 2px;
     }
 }
+<<<<<<< HEAD
 ", "@WebProfiler/Profiler/profiler.css.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\projet_v1_27_04-new_profile_page\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\profiler.css.twig");
+=======
+", "@WebProfiler/Profiler/profiler.css.twig", "C:\\Users\\kevin\\Desktop\\projet Symfony\\facebook_secu\\facebook\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\profiler.css.twig");
+>>>>>>> 0778aab4bee984492047322f575da86c34e4d02b
     }
 }
